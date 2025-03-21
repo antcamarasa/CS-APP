@@ -10,7 +10,7 @@ Dans leur texte classique sur le langage de programmation C [61], Kernighan et R
 
 Nous commençons notre étude des systèmes en suivant la durée de vie du programme "hello", depuis le moment où il est créé par un programmeur, jusqu'à son exécution sur un système, l'impression de son simple message et son arrêt. À mesure que nous suivons la durée de vie du programme, nous introduirons brièvement les concepts clés, la terminologie et les composants qui interviennent. Les chapitres suivants développeront ces idées.
 
-###code/intro/hello.c
+### code/intro/hello.c
 ```c
 #include <stdio.h>
 
@@ -19,6 +19,69 @@ int main() {
     return 0;
 }
 
+```
+```c
+| Décimal | Hex  | Binaire    | Caractère |
+|---------|------|-----------|-----------|
+| 32      | 0x20 | 00100000  | (espace)  |
+| 33      | 0x21 | 00100001  | !         |
+| 34      | 0x22 | 00100010  | "         |
+| 35      | 0x23 | 00100011  | #         |
+| 36      | 0x24 | 00100100  | $         |
+| 37      | 0x25 | 00100101  | %         |
+| 38      | 0x26 | 00100110  | &         |
+| 39      | 0x27 | 00100111  | '         |
+| 40      | 0x28 | 00101000  | (         |
+| 41      | 0x29 | 00101001  | )         |
+| 42      | 0x2A | 00101010  | *         |
+| 43      | 0x2B | 00101011  | +         |
+| 44      | 0x2C | 00101100  | ,         |
+| 45      | 0x2D | 00101101  | -         |
+| 46      | 0x2E | 00101110  | .         |
+| 47      | 0x2F | 00101111  | /         |
+| 48      | 0x30 | 00110000  | 0         |
+| 49      | 0x31 | 00110001  | 1         |
+| 50      | 0x32 | 00110010  | 2         |
+| 51      | 0x33 | 00110011  | 3         |
+| 52      | 0x34 | 00110100  | 4         |
+| 53      | 0x35 | 00110101  | 5         |
+| 54      | 0x36 | 00110110  | 6         |
+| 55      | 0x37 | 00110111  | 7         |
+| 56      | 0x38 | 00111000  | 8         |
+| 57      | 0x39 | 00111001  | 9         |
+| 58      | 0x3A | 00111010  | :         |
+| 59      | 0x3B | 00111011  | ;         |
+| 60      | 0x3C | 00111100  | <         |
+| 61      | 0x3D | 00111101  | =         |
+| 62      | 0x3E | 00111110  | >         |
+| 63      | 0x3F | 00111111  | ?         |
+| 64      | 0x40 | 01000000  | @         |
+| 65      | 0x41 | 01000001  | A         |
+| 66      | 0x42 | 01000010  | B         |
+| 67      | 0x43 | 01000011  | C         |
+| 68      | 0x44 | 01000100  | D         |
+| 69      | 0x45 | 01000101  | E         |
+| 70      | 0x46 | 01000110  | F         |
+| 71      | 0x47 | 01000111  | G         |
+| 72      | 0x48 | 01001000  | H         |
+| 73      | 0x49 | 01001001  | I         |
+| 74      | 0x4A | 01001010  | J         |
+| 75      | 0x4B | 01001011  | K         |
+| 76      | 0x4C | 01001100  | L         |
+| 77      | 0x4D | 01001101  | M         |
+| 78      | 0x4E | 01001110  | N         |
+| 79      | 0x4F | 01001111  | O         |
+| 80      | 0x50 | 01010000  | P         |
+| 81      | 0x51 | 01010001  | Q         |
+| 82      | 0x52 | 01010010  | R         |
+| 83      | 0x53 | 01010011  | S         |
+| 84      | 0x54 | 01010100  | T         |
+| 85      | 0x55 | 01010101  | U         |
+| 86      | 0x56 | 01010110  | V         |
+| 87      | 0x57 | 01010111  | W         |
+| 88      | 0x58 | 01011000  | X         |
+| 89      | 0x59 | 01011001  | Y         |
+| 90      | 0x5A | 01011010  | Z         |
 ```
 ## 1.1 L'Information est des Bits + du Contexte
 Notre programme "hello" commence sa vie en tant que programme source (ou fichier source) que le programmeur crée avec un éditeur et enregistre dans un fichier texte appelé "hello.c". Le programme source est une séquence de bits, chacun ayant une valeur de 0 ou 1, organisés en morceaux de 8 bits appelés octets. Chaque octet représente un caractère texte dans le programme.
